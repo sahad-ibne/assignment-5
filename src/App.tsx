@@ -11,13 +11,32 @@ const techFetch = async (): Promise<ITech[]> => {
 }
 
 function App() {
- const [techPromise] = useState(() => techFetch())
+  const [techPromise] = useState(() => techFetch())
+  const [stack, setStack] = useState<ITech[]>([]);
+
+  const handleAddToStack = (tech: ITech) => {
+    if (!stack.find((item) => item.id === tech.id)) {
+      setStack((prev) => [...prev, tech]);
+    }
+  };
+
+  const handleRemoveFromStack = (id: string) => {
+    setStack((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  const handleClearStack = () => {
+    setStack([]);
+  };
+
   return (
     <>
-    <Nav></Nav>
-    <Banner></Banner>
-    <Suspense fallback={<h1>Loading....</h1>}>
-        <TechCards techPromise={techPromise}></TechCards>
+      <Nav></Nav>
+      <Banner></Banner>
+      <Suspense fallback={<h1>Loading....</h1>}>
+        <TechCards techPromise={techPromise} stack={stack}
+          AddToStack={handleAddToStack}
+          RemoveFromStack={handleRemoveFromStack}
+          ClearStack={handleClearStack}></TechCards>
       </Suspense>
     </>
   )
