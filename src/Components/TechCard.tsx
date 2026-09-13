@@ -44,7 +44,7 @@ const TechCards = ({
                             <div
                                 key={tech.id}
                                 className={`bg-white border rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between cursor-pointer ${isAdded
-                                    ? "border-pink-500 border-2 bg-black-100"
+                                    ? "border-pink-500 border bg-black-100"
                                     : "border-slate-200 hover:border-pink-300"
                                     }`}
                             >
