@@ -5,6 +5,7 @@ import TechCards from "./Components/TechCard";
 import type { ITech } from "./TechType";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./Components/Footer";
 
 const techFetch = async (): Promise<ITech[]> => {
   const res = await fetch("/data.json");
@@ -65,9 +66,8 @@ function App() {
           ClearStack={handleClearStack}
         ></TechCards>
       </Suspense>
-      <div className="min-h-screen bg-slate-50 p-8">
-        <ToastContainer />
-      </div>
+      <Footer></Footer>
+      <ToastContainer />
     </>
   );
 }
