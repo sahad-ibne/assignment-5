@@ -29,6 +29,11 @@ npm install
 # Run dev server
 npm run dev
 
+
+# Live link
+shimmering-cascaron-ba704d.netlify.app
+
+
 ## 💡 React Q&A
 
 ### What is JSX, and why is it used in React?
