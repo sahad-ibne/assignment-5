@@ -18,7 +18,7 @@ DevStack is a simple web app that lets developers explore technologies and build
 
 ```bash
 # Clone the repository
-git clone [https://github.com/sahad-ibne/assignment-5.git](https://github.com/sahad-ibne/assignment-5.git)
+git clone https://github.com/sahad-ibne/assignment-5.git
 
 # Go to project directory
 cd assignment-5
@@ -32,7 +32,7 @@ npm run dev
 
 # Live link
 shimmering-cascaron-ba704d.netlify.app
-
+```
 
 ## 💡 React Q&A
 
