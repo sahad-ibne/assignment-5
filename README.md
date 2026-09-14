@@ -67,6 +67,7 @@ In `YourStack.tsx`, I used it to check if the stack array is empty. If empty, it
     {/* Stack list items */}
   </div>
 )}
+```
 ### How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 * **Parent to Child:** The parent component passes data down using **props** (e.g., passing the `stack` array into `<YourStack stack={stack} />`).
 * **Child to Parent:** The parent sends a **callback function** down as a prop, and the child calls it with an argument when an action happens (e.g., clicking the remove button triggers `onClick={() => RemoveFromStack(item.id)}` to tell the parent which item to remove).
